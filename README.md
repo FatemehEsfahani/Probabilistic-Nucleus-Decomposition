@@ -76,11 +76,11 @@ The last code creates three files: cnr-2000-u.w.labeloffsets, cnr-2000-u.w.label
 
 Other parametres that are used for ruuning our codes are: threshold, numSamples, and precision.
 
-threshold: It is used to give certainty when outputting the results in a probabilistic graph. 
+threshold: It is used to give certainty when outputting the results in a probabilistic graph. We denote it by <img src="https://render.githubusercontent.com/render/math?math=\theta">. In our experiments we set it to 0.1,...,0.5.
 
 numSamples: It is used to indicate the number of samples for weakly-global and global nucleus decompositions which are based on Monte-Carlo sampling
 
-precision: It is used to change weights to the actual probabilities. For cnr-2000, precision is equal to 2.
+precision: It is used to change weights to the actual probabilities. For cnr-2000, and Flickr-proc the precisions are equal to 2 and 16, respectively.
 
 # Compiling
 
@@ -95,11 +95,11 @@ java -Xmx12g -cp "bin":"lib/*" PNucl_DP_Efficient basename.w precision threshold
 </pre>
 e.g.
 <pre>
-java -Xmx12g -cp "bin":"lib/*" PNucl_DP_Efficient newTest.w 16 0.1
+java -Xmx12g -cp "bin":"lib/*" PNucl_DP_Efficient Flickr-proc.w 16 0.1
 </pre>
 (Change : to ; if you are on Windows)
 
-The result will be stored in a text file basename+"eta-" + eta + "-bz.txt". The lines of the file are of the form vertex-id:probabilistic core-number.
+The result will be stored in a text file basename + "-" + eta + "-" + "finalsupp_DP_Modified.txt". The lines of the file are of the form u v w nucleuss_score, where a triangle is indicated by its vertices u,v,w and nucleuss_score is the nucleus score of the trainable.
 
 PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta:
 <pre>
@@ -107,10 +107,10 @@ java -Xmx12g -cp "bin":"lib/*" PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta b
 </pre>
 e.g.
 <pre>
-java -Xmx12g -cp "bin":"lib/*" PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta newTest.w 0.1 1500 2  
+java -Xmx12g -cp "bin":"lib/*" PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta Flickr-proc.w 16 0.1
 </pre>
-The result will be stored in a text file basename+"eta-" + eta + "-vc.txt". The lines of the file are of the form vertex-id:probabilistic core-number.
 
+The result will be stored in a text file basename+"-"+eta+"-"+"finalsupp_MixApprox_Regularized_version1_Modified.txt". The lines of the file are of the form u v w app_nucleuss_score, where a triangle is indicated by its vertices u,v,w and app_nucleuss_score is the approximate value for nucleus score of the trainable.
 Weakly_Global_onSmallGraph_ForExperiments:
 <pre>
 java -Xmx12g -cp "bin":"lib/*" Weakly_Global_onSmallGraph_ForExperiments basename.w precision threshold numSamples  
