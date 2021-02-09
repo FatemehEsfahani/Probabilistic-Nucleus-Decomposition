@@ -110,16 +110,18 @@ e.g.
 java -Xmx12g -cp "bin":"lib/*" PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta Flickr-proc.w 16 0.1
 </pre>
 
-The result will be stored in a text file basename+"-"+eta+"-"+"finalsupp_MixApprox_Regularized_version1_Modified.txt". The lines of the file are of the form u v w app_nucleuss_score, where a triangle is indicated by its vertices u,v,w and app_nucleuss_score is the approximate value for nucleus score of the trainable.
+The result will be stored in a text file basename+"-"+eta+"-"+"finalsupp_MixApprox_Regularized_version1_Modified.txt". The lines of the file are of the form 
+u v w app_nucleuss_score, where a triangle is indicated by its vertices u,v,w and app_nucleuss_score is the approximate value for nucleus score of the trainable.
+
 Weakly_Global_onSmallGraph_ForExperiments:
 <pre>
 java -Xmx12g -cp "bin":"lib/*" Weakly_Global_onSmallGraph_ForExperiments basename.w precision threshold numSamples  
 </pre>
 e.g.
 <pre>
-java -Xmx12g -cp "bin":"lib/*" Weakly_Global_onSmallGraph_ForExperiments newTest.w 2 0.1 200 
+java -Xmx12g -cp "bin":"lib/*" Weakly_Global_onSmallGraph_ForExperiments Flickr-proc.w 16 0.1 200 
 </pre>
-The result will be stored in a text file basename+"eta-" + eta + "-vc.txt". The lines of the file are of the form vertex-id:probabilistic core-number.
+The result will be stored in a text file "WGlobal-" + num_samples + "-" + basename + "-" + eta + "-.txt". The file contains all the weakly-global nuclei detected by the algorithm.
 
 Golbal_nuclei_Finding_onSmallGraph_ForExperiments:
 <pre>
@@ -127,22 +129,22 @@ java -Xmx12g -cp "bin":"lib/*" Golbal_nuclei_Finding_onSmallGraph_ForExperiments
 </pre>
 e.g.
 <pre>
-java -Xmx12g -cp "bin":"lib/*" Golbal_nuclei_Finding_onSmallGraph_ForExperiments newTest.w 2 0.1 200 
+java -Xmx12g -cp "bin":"lib/*" Golbal_nuclei_Finding_onSmallGraph_ForExperiments Flickr-proc.w 16 0.1 200 
 </pre>
-The result will be stored in a text file basename+"eta-" + eta + "-vc.txt". The lines of the file are of the form vertex-id:probabilistic core-number.
+The result will be stored in a text file String globalfile = "Global-"+num_samples + "-" +basename + "-" + eta + "-.txt". The file contains all the global nuclei detected by the algorithm.
 
 # Using git
 First clone repo.
 
 <pre>
-git clone https://github.com/thomouvic/pcore.git
+git clone https://github.com/FatemehEsfahani/Probabilistic-Nucleus-Decomposition.git
 </pre>
 
-This will create a directory "pcore" with the current code of this project. The subdirectories created are "src" and "lib". 
+This will create a directory "Probabilistic-Nucleus-Decomposition" with the current code of this project. The subdirectories created are "src" and "lib". 
 
 Copy the source files you changed to "pcode/src". 
 
-While being in "pcode", run 
+While being in "Probabilistic-Nucleus-Decomposition", run 
 <pre>
 git add .
 </pre>
