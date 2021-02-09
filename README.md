@@ -19,9 +19,9 @@ The graph datasets used for our algorithms should be in WebGraph format with edg
 
 There are three files in this format:
 
-newTest.w.labeloffsets<br/>
-newTest.w.labels<br/>
-newTest.w.properties<br/>
+Flickr-proc.w.labeloffsets<br/>
+Flickr.w.labels<br/>
+Flickr.w.properties<br/>
 
 see newTest example in the main directory. 
 
