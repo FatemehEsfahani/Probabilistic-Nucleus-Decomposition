@@ -77,7 +77,7 @@ Other parametres that are used for ruuning our codes are: threshold, numSamples,
 
 threshold: It is used to give certainty when outputting the results in a probabilistic graph. We denote it by <img src="https://render.githubusercontent.com/render/math?math=\theta">. In our experiments we set it to 0.1,...,0.5.
 
-numSamples: It is used to indicate the number of samples for weakly-global and global nucleus decompositions which are based on Monte-Carlo sampling
+numSamples: It is used to indicate the number of samples for weakly-global and global nucleus decompositions which are based on Monte-Carlo sampling. We set numSamples to 200 in our experimanets.
 
 precision: It is used to change weights to the actual probabilities. For cnr-2000, and Flickr-proc the precisions are equal to 2 and 16, respectively.
 
