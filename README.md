@@ -1,5 +1,7 @@
 # Nucleus Decomposition of Probabilistic Networks
-This repository contains efficient implementations for computing nucleus decomposition in probabilistic graphs. The link to our dataset can be bound in https://www.dropbox.com/sh/cunq076ocfu8m05/AACU5Wcz9p_vp5PJ-0RsBbdja?dl=0
+This repository contains efficient implementations for computing nucleus decomposition in probabilistic graphs. The link to our dataset can be found in
+
+https://www.dropbox.com/sh/cunq076ocfu8m05/AACU5Wcz9p_vp5PJ-0RsBbdja?dl=0
 
 # Local Nucleus Decomposition
 1) **PNucl_DP_Efficient.java:** This is an implementation of local nucleus decomposition of probabilistic graphs which uses dynamic programming for computing and updating the support of triangles (DP).
