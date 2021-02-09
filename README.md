@@ -1,7 +1,6 @@
 # Nucleus Decomposition of Probabilistic Networks
-This repository contains efficient implementations for computing nucleus decomposition in probabilistic graphs. The link to our dataset can be found in
+This repository contains efficient implementations for computing nucleus decomposition in probabilistic graphs.
 
-https://www.dropbox.com/sh/cunq076ocfu8m05/AACU5Wcz9p_vp5PJ-0RsBbdja?dl=0
 
 # Local Nucleus Decomposition
 1) **PNucl_DP_Efficient.java:** This is an implementation of local nucleus decomposition of probabilistic graphs which uses dynamic programming for computing and updating the support of triangles (DP).
@@ -81,6 +80,10 @@ threshold: It is used to give certainty when outputting the results in a probabi
 numSamples: It is used to indicate the number of samples for weakly-global and global nucleus decompositions which are based on Monte-Carlo sampling
 
 precision: It is used to change weights to the actual probabilities. For cnr-2000, and Flickr-proc the precisions are equal to 2 and 16, respectively.
+
+The link to our datasets can be found in: https://www.dropbox.com/sh/cunq076ocfu8m05/AACU5Wcz9p_vp5PJ-0RsBbdja?dl=0
+
+For Flickr-proc, DBLP-proc, biomine-proc, precision should be queal to 16. For ljournal-2008-u and pokec-proc, the precision should be queal to 2, and for krogan-proc the precision should be queal to 3.
 
 # Compiling
 
