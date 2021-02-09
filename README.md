@@ -20,10 +20,10 @@ The graph datasets used for our algorithms should be in WebGraph format with edg
 There are three files in this format:
 
 Flickr-proc.w.labeloffsets<br/>
-Flickr.w.labels<br/>
-Flickr.w.properties<br/>
+Flickr-proc.w.labels<br/>
+Flickr-proc.w.properties<br/>
 
-see newTest example in the main directory. 
+see Flickr-proc example in the main directory. 
 
 There are many available datasets in http://law.di.unimi.it/datasets.php which can be converted to an ArcLabelled Webgraph. These datasets are unweighted and directed graphs, which are in Webgraph format.
 
