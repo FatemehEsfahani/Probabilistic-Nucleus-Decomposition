@@ -32,7 +32,7 @@ import gnu.trove.map.TIntObjectMap;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
 
-public class Weakly_Global_onSmallGraph_ForExperiments {
+public class WeaklyGlobalNucleus {
 
 	String basename;
 	int precision;
@@ -77,7 +77,7 @@ public class Weakly_Global_onSmallGraph_ForExperiments {
 	List<Integer> list_of_vertices;
 	List<Integer> list_of_edges;
 
-	public Weakly_Global_onSmallGraph_ForExperiments(String basename, int precision, double eta, int num_samples)
+	public WeaklyGlobalNucleus(String basename, int precision, double eta, int num_samples)
 			throws Exception {
 
 		this.basename = basename;
@@ -1659,7 +1659,7 @@ public class Weakly_Global_onSmallGraph_ForExperiments {
 		// String basename = "DBLP_algorithm-proc.w";
 		//int precision = 3;
 		
-		Weakly_Global_onSmallGraph_ForExperiments GNC = new Weakly_Global_onSmallGraph_ForExperiments(basename,
+		WeaklyGlobalNucleus GNC = new WeaklyGlobalNucleus(basename,
 				precision, eta, num_sample);
 		GNC.Main_BasicSampling();
 
