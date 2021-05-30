@@ -24,7 +24,7 @@ import org.apache.commons.math3.distribution.PoissonDistribution;
 //import com.google.common.collect.BiMap;
 //import com.google.common.collect.HashBiMap;
 
-public class PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta {
+public class LocalNucleusAP {
 	
 	String basename; // uncertain graph's name
 	int precision;  // for edge probabilities
@@ -67,7 +67,7 @@ public class PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta {
 	int[] determinSupp;
 	int[] non1supp;
 
-	public PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta(String basename, int precision, double eta) throws Exception {
+	public LocalNucleusAP(String basename, int precision, double eta) throws Exception {
 
 		this.basename = basename;
 		this.precision = precision;
@@ -1391,7 +1391,7 @@ public int LYc(double expected, double var, int nonprob1_contained_4cliques, int
 		double eta = Double.valueOf(args[2]);
 		
 		
-		PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta pr_nc_2 = new PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta(basename, precision, eta);
+		LocalNucleusAP pr_nc_2 = new LocalNucleusAP(basename, precision, eta);
 		//System.out.println("Bion " + pr_nc.Binomial_approx(3, 0.14, 3) + " DP " + pr_nc.DP(3, l, 3)+ " traspois " +pr_nc.Translated_Poisson_approx(3, 0.14, 0.131, 3));
 		//System.out.println("LYC " + pr_nc.LYc(0.14, 0.131, 3, 3, eta, precision));
 		//pr_nc.findTriExiprob();
