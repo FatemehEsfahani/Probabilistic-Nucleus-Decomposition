@@ -22,7 +22,7 @@ Flickr-proc.w.labeloffsets<br/>
 Flickr-proc.w.labels<br/>
 Flickr-proc.w.properties<br/>
 
-see Flickr-proc example in the main directory. 
+see for example Flickr-proc in the main directory. 
 
 There are many available datasets in http://law.di.unimi.it/datasets.php which can be converted to an ArcLabelled Webgraph. These datasets are unweighted and directed graphs, which are in Webgraph format.
 
@@ -56,7 +56,7 @@ java -Xmx8g -cp "bin":"lib/*" SelfLoopRemover cnr-2000 cnr-2000
 <pre>
 java -Xmx8g -cp "bin":"lib/*" SelfLoopRemover cnr-2000-t cnr-2000-t
 </pre>
-where the flag "Xmx" specifies the maximum memory allocation pool for a Java virtual machine (JVM). It can be specified in different sizes, such as kilobytes, megabytes, and so on.
+where the flag "Xmx" specifies the maximum memory allocation pool for Java virtual machine (JVM). It can be specified in different sizes, such as kilobytes, megabytes, and so on.
 
 Now, we generate weights which are uniformly distibuted. Here, we show this for cnr-2000:
 <pre>
@@ -64,7 +64,7 @@ java -Xmx8g -cp "bin":"lib/*" GenerateWeightedGraphRandomLong cnr-2000 1 100
 </pre>
 The above java code produces random weights between range 1 and 100. For each edge, the weight is stored as an integer in the Long format. In our implementations, we access the actual probability of an edge by multplying its corresponding weight by <img src="https://render.githubusercontent.com/render/math?math=10^{-2}">. For instance, for an edge with weight 60, the corresponding probability is obtained by multiplying 60 by 0.01 which is equal to 0.6.
 
-Our implementations work with undirected graphs with symmetrized weights. To change a graph to an undirected one, for each edge we add its inverse. This can be achieved by taking the union of the graph with its transpose. Here, we show how to do this for cnr-2000. Here, we show how to do this for cnr-2000:
+Our implementations work with undirected graphs with symmetrized weights. To change a graph to an undirected one, for each edge we add its inverse. This can be achieved by taking the union of the graph with its transpose. Here, we show how to do this for cnr-2000:
 <pre>
 java -Xmx8g -cp "bin":"lib/*" TransposeWeightedGraphLong cnr-2000 
 </pre>
