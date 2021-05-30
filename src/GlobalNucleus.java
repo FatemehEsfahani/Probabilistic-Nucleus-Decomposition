@@ -29,7 +29,7 @@ import it.unimi.dsi.webgraph.labelling.Label;
 //3) for each connected component which contains the authors of interest, it finds the global nuclei. In this version, I store the 
 //connected component as a new graph.
 
-public class Golbal_nuclei_Finding_onSmallGraph_ForExperiments {
+public class GlobalNucleus {
 
 	String basename;
 	int precision;
@@ -101,7 +101,7 @@ public class Golbal_nuclei_Finding_onSmallGraph_ForExperiments {
 
 	
 	//public Golbal_nuclei_Finding_onSmallGraph_ForExperiments(String basename, int precision, double eta, int num_samples,double eta2) throws Exception {
-	public Golbal_nuclei_Finding_onSmallGraph_ForExperiments(String basename, int precision, double eta, int num_samples) throws Exception {
+	public GlobalNucleus(String basename, int precision, double eta, int num_samples) throws Exception {
 
 		this.basename = basename;
 		this.precision = precision;
@@ -1699,7 +1699,7 @@ public class Golbal_nuclei_Finding_onSmallGraph_ForExperiments {
 		//double eta2 = 0.1;
 		
 
-		Golbal_nuclei_Finding_onSmallGraph_ForExperiments gb = new Golbal_nuclei_Finding_onSmallGraph_ForExperiments(basename, precision, eta,num_sample);
+		GlobalNucleus gb = new GlobalNucleus(basename, precision, eta,num_sample);
 		gb.findConnectedComponnents();
 	}
 
