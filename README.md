@@ -102,7 +102,7 @@ java -Xmx12g -cp "bin":"lib/*" LocalNucleusDP Flickr-proc.w 16 0.1
 </pre>
 (Change : to ; if you are on Windows)
 
-The result will be stored in a text file basename + "-" + eta + "-" + "finalsupp_DP_Modified.txt". The lines of the file are of the form u v w nucleuss_score, where a triangle is indicated by its vertices u,v,w and nucleuss_score is the nucleus score of the trainable.
+The result will be stored in a text file basename + "-" + eta + "-" + "LocalNucleusDP.txt". The lines of the file are of the form u v w nucleuss_score, where a triangle is indicated by its vertices u,v,w and nucleuss_score is the nucleus score of the trainable.
 
 LocalNucleusAP:
 <pre>
@@ -113,7 +113,7 @@ e.g.
 java -Xmx12g -cp "bin":"lib/*" LocalNucleusAP Flickr-proc.w 16 0.1
 </pre>
 
-The result will be stored in a text file basename+"-"+eta+"-"+"finalsupp_MixApprox_Regularized_version1_Modified.txt". The lines of the file are of the form 
+The result will be stored in a text file basename+"-"+eta+"-"+"LocalNucleusAP.txt". The lines of the file are of the form 
 u v w app_nucleuss_score, where a triangle is indicated by its vertices u,v,w and app_nucleuss_score is the approximate value for nucleus score of the trainable.
 
 WeaklyGlobalNucleus:
@@ -124,7 +124,7 @@ e.g.
 <pre>
 java -Xmx12g -cp "bin":"lib/*" WeaklyGlobalNucleus Flickr-proc.w 16 0.1 200 
 </pre>
-The result will be stored in a text file "WGlobal-" + num_samples + "-" + basename + "-" + eta + "-.txt". The file contains all the weakly-global nuclei detected by the algorithm.
+The result will be stored in a text file "WeaklyGlobalNucleus-" + num_samples + "-" + basename + "-" + eta + "-.txt". The file contains all the weakly-global nuclei detected by the algorithm.
 
 GlobalNucleus:
 <pre>
@@ -134,7 +134,7 @@ e.g.
 <pre>
 java -Xmx12g -cp "bin":"lib/*" GlobalNucleus Flickr-proc.w 16 0.1 200 
 </pre>
-The result will be stored in a text file String globalfile = "Global-"+num_samples + "-" +basename + "-" + eta + "-.txt". The file contains all the global nuclei detected by the algorithm.
+The result will be stored in a text file String globalfile = "GlobalNucleus-"+num_samples + "-" +basename + "-" + eta + "-.txt". The file contains all the global nuclei detected by the algorithm.
 
 # Using git
 First clone repo.
