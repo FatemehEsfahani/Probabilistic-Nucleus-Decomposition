@@ -222,7 +222,7 @@ public class GlobalNucleus {
 
 	public void findConnectedComponnents() throws Exception {
 		
-		String globalfile = "Global-"+num_samples + "-" +basename + "-" + eta + "-.txt"; 
+		String globalfile = "GlobalNucleus-"+num_samples + "-" +basename + "-" + eta + "-.txt"; 
 		BufferedWriter wg = new BufferedWriter(new FileWriter(globalfile));
 		
 		System.out.println("start finding connected components and their global subgraph....");
