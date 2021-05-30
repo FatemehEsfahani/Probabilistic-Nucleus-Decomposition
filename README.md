@@ -3,15 +3,15 @@ This repository contains efficient implementations for computing nucleus decompo
 
 
 # Local Nucleus Decomposition
-1) **LocalNucleusDP.java:** This is the implementation of local nucleus decomposition of probabilistic graphs using dynamic programming. Dynamic programming is used for computing and updating the support of triangles in the input graph.
+1) **LocalNucleusDP.java:** This is the implementation of local nucleus decomposition in probabilistic graphs using dynamic programming. Dynamic programming is used for computing and updating the support of triangles in the input graph.
 
-2) **LocalNucleusAP.java:** This is the implementation of local nucleus decomposition of probabilistic graphs using statistical approximations for computing and updating the support of triangles in the input graph.
+2) **LocalNucleusAP.java:** This is the implementation of local nucleus decomposition in probabilistic graphs using statistical approximations for computing and updating the support of triangles in the input graph.
 
 # Weakly-global Nucleus Decomposition  
-**WeaklyGlobalNucleus.java:** This is the implementation of weakly-global nucleus decomposition of probabilistic graphs which gives approximate solutions based on search space pruning combined with Monte-Carlo sampling.
+**WeaklyGlobalNucleus.java:** This is the implementation of weakly-global nucleus decomposition in probabilistic graphs which gives approximate solutions based on search space pruning combined with Monte-Carlo sampling.
 
 # Global Nucleus Decomposition
-**GlobalNucleus.java:** This is the implementation of global nucleus decomposition of probabilistic graphs which gives approximate solutions based on search space pruning combined with Monte-Carlo sampling.
+**GlobalNucleus.java:** This is the implementation of global nucleus decomposition in probabilistic graphs which gives approximate solutions based on search space pruning combined with Monte-Carlo sampling.
 
 # Input 
 The graph datasets used for our algorithms should be in WebGraph format with edges being assigned probabilities. We refore to this type of Webgraph as ArcLabelled Webgraph. 
@@ -81,7 +81,7 @@ numSamples: It is used to indicate the number of samples for weakly-global and g
 
 precision: It is used to change weights to the actual probabilities. For cnr-2000, and Flickr-proc the precisions are equal to 2 and 16, respectively.
 
-The link to our datasets can be found in: https://www.dropbox.com/sh/cunq076ocfu8m05/AACU5Wcz9p_vp5PJ-0RsBbdja?dl=0
+**The link to our datasets can be found in: https://www.dropbox.com/sh/cunq076ocfu8m05/AACU5Wcz9p_vp5PJ-0RsBbdja?dl=0**
 
 For Flickr-proc, DBLP-proc, biomine-proc, precision should be queal to 16. For ljournal-2008-u and pokec-proc, the precision should be queal to 2, and for krogan-proc the precision should be queal to 3.
 
@@ -92,47 +92,47 @@ mkdir -p bin; javac -cp "bin":"lib/*" -d bin src/it/unimi/dsi/webgraph/labelling
 </pre>
 
 # Running
-PNucl_DP_Efficient:
+LocalNucleusDP:
 <pre>
-java -Xmx12g -cp "bin":"lib/*" PNucl_DP_Efficient basename.w precision threshold
+java -Xmx12g -cp "bin":"lib/*" LocalNucleusDP basename.w precision threshold
 </pre>
 e.g.
 <pre>
-java -Xmx12g -cp "bin":"lib/*" PNucl_DP_Efficient Flickr-proc.w 16 0.1
+java -Xmx12g -cp "bin":"lib/*" LocalNucleusDP Flickr-proc.w 16 0.1
 </pre>
 (Change : to ; if you are on Windows)
 
 The result will be stored in a text file basename + "-" + eta + "-" + "finalsupp_DP_Modified.txt". The lines of the file are of the form u v w nucleuss_score, where a triangle is indicated by its vertices u,v,w and nucleuss_score is the nucleus score of the trainable.
 
-PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta:
+LocalNucleusAP:
 <pre>
-java -Xmx12g -cp "bin":"lib/*" PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta basename.w precision threshold  
+java -Xmx12g -cp "bin":"lib/*" LocalNucleusAP basename.w precision threshold  
 </pre>
 e.g.
 <pre>
-java -Xmx12g -cp "bin":"lib/*" PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta Flickr-proc.w 16 0.1
+java -Xmx12g -cp "bin":"lib/*" LocalNucleusAP Flickr-proc.w 16 0.1
 </pre>
 
 The result will be stored in a text file basename+"-"+eta+"-"+"finalsupp_MixApprox_Regularized_version1_Modified.txt". The lines of the file are of the form 
 u v w app_nucleuss_score, where a triangle is indicated by its vertices u,v,w and app_nucleuss_score is the approximate value for nucleus score of the trainable.
 
-Weakly_Global_onSmallGraph_ForExperiments:
+WeaklyGlobalNucleus:
 <pre>
-java -Xmx12g -cp "bin":"lib/*" Weakly_Global_onSmallGraph_ForExperiments basename.w precision threshold numSamples  
+java -Xmx12g -cp "bin":"lib/*" WeaklyGlobalNucleus basename.w precision threshold numSamples  
 </pre>
 e.g.
 <pre>
-java -Xmx12g -cp "bin":"lib/*" Weakly_Global_onSmallGraph_ForExperiments Flickr-proc.w 16 0.1 200 
+java -Xmx12g -cp "bin":"lib/*" WeaklyGlobalNucleus Flickr-proc.w 16 0.1 200 
 </pre>
 The result will be stored in a text file "WGlobal-" + num_samples + "-" + basename + "-" + eta + "-.txt". The file contains all the weakly-global nuclei detected by the algorithm.
 
-Golbal_nuclei_Finding_onSmallGraph_ForExperiments:
+GlobalNucleus:
 <pre>
-java -Xmx12g -cp "bin":"lib/*" Golbal_nuclei_Finding_onSmallGraph_ForExperiments basename.w precision threshold numSamples   
+java -Xmx12g -cp "bin":"lib/*" GlobalNucleus basename.w precision threshold numSamples   
 </pre>
 e.g.
 <pre>
-java -Xmx12g -cp "bin":"lib/*" Golbal_nuclei_Finding_onSmallGraph_ForExperiments Flickr-proc.w 16 0.1 200 
+java -Xmx12g -cp "bin":"lib/*" GlobalNucleus Flickr-proc.w 16 0.1 200 
 </pre>
 The result will be stored in a text file String globalfile = "Global-"+num_samples + "-" +basename + "-" + eta + "-.txt". The file contains all the global nuclei detected by the algorithm.
 
@@ -143,7 +143,7 @@ First clone repo.
 git clone https://github.com/FatemehEsfahani/Probabilistic-Nucleus-Decomposition.git
 </pre>
 
-This will create a directory "Probabilistic-Nucleus-Decomposition" with the current code of this project. The subdirectories created are "src" and "lib". 
+This will create a directory "Probabilistic-Nucleus-Decomposition" with the current codes of this project. The subdirectories created are "src" and "lib". 
 
 Copy the source files you changed to "pcode/src". 
 
