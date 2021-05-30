@@ -1131,7 +1131,7 @@ public class LocalNucleusAP {
 		
 		//ave_4kDegree_nozerotrian(support);
 		
-		String filename = basename+"-"+eta+"-"+"finalsupp_MixApprox_Regularized_version1_Modified.txt";
+		String filename = basename+"-"+eta+"-"+"LocalNucleusAP.txt";
 		writeResults(support,filename);
 		
 		
