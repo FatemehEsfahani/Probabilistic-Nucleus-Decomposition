@@ -1063,7 +1063,7 @@ public class  LocalNucleusDP {
 			LocalNucleusDP pr_nc = new  LocalNucleusDP(basename, precision, eta);
 			pr_nc.computeTriangles_degree();
 			 pr_nc.nucleusDecomposition();
-			 String filename = basename + "-" + eta + "-" + "finalsupp_DP_Modified.txt";
+			 String filename = basename + "-" + eta + "-" + "LocalNucleusDP.txt";
 			 pr_nc.writeResults(pr_nc._4kDegree, filename);
 			 
 			 long endTime = System.currentTimeMillis();
