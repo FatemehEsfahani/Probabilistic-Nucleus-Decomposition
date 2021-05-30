@@ -618,7 +618,7 @@ public class WeaklyGlobalNucleus {
 		
 		
 
-		String wglobalfile = "WGlobal-" + num_samples + "-" + basename + "-" + eta + "-.txt";
+		String wglobalfile = "WeaklyGlobalNucleus-" + num_samples + "-" + basename + "-" + eta + "-.txt";
 		BufferedWriter wg = new BufferedWriter(new FileWriter(wglobalfile));
 
 		//String localfile = "Local-" + num_samples + "-" + basename + "-" + eta + "-.txt";
