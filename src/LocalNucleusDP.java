@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 import java.util.stream.IntStream;
 
-public class PNucl_DP_Efficient {
+public class  LocalNucleusDP {
 
 	String basename; // uncertain graph
 	int precision;
@@ -52,7 +52,7 @@ public class PNucl_DP_Efficient {
 	final int[] offset; // offset array for edges
 	double[] edge_prob;
 
-	public PNucl_DP_Efficient(String basename, int precision, double eta) throws Exception {
+	public  LocalNucleusDP(String basename, int precision, double eta) throws Exception {
 
 		this.basename = basename;
 		this.precision = precision;
@@ -1060,7 +1060,7 @@ public class PNucl_DP_Efficient {
 			//String basename = "test_global_1000"+i+".w";
 		    //String basename = "DBLP_data_net_proc.w";
 		//String basename = "DBLP_data_net-proc.w";
-			PNucl_DP_Efficient pr_nc = new PNucl_DP_Efficient(basename, precision, eta);
+			LocalNucleusDP pr_nc = new  LocalNucleusDP(basename, precision, eta);
 			pr_nc.computeTriangles_degree();
 			 pr_nc.nucleusDecomposition();
 			 String filename = basename + "-" + eta + "-" + "finalsupp_DP_Modified.txt";
