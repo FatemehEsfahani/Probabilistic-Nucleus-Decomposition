@@ -3,15 +3,15 @@ This repository contains efficient implementations for computing nucleus decompo
 
 
 # Local Nucleus Decomposition
-1) **PNucl_DP_Efficient.java:** This is an implementation of local nucleus decomposition of probabilistic graphs which uses dynamic programming for computing and updating the support of triangles (DP).
+1) **LocalNucleusDP.java:** This is the implementation of local nucleus decomposition of probabilistic graphs using dynamic programming. Dynamic programming is used for computing and updating the support of triangles in the input graph.
 
-2) **PNucl_CLT_BinoJava_DP_Efficient_RegularizedBeta.java:** This is an implementation of local nucleus decomposition of probabilistic graphs which uses statistical approximations for computing and updating the support of triangles (AP).
+2) **LocalNucleusAP.java:** This is the implementation of local nucleus decomposition of probabilistic graphs using statistical approximations for computing and updating the support of triangles in the input graph.
 
 # Weakly-global Nucleus Decomposition  
-**Weakly_Global_onSmallGraph_ForExperiments.java:** This is an implementation of weakly-global nucleus decomposition of probabilistic graphs which gives approximate solutions based on search space pruning combined with Monte-Carlo sampling.
+**WeaklyGlobalNucleus.java:** This is the implementation of weakly-global nucleus decomposition of probabilistic graphs which gives approximate solutions based on search space pruning combined with Monte-Carlo sampling.
 
 # Global Nucleus Decomposition
-**Golbal_nuclei_Finding_onSmallGraph_ForExperiments.java:** This is an implementation of global nucleus decomposition of probabilistic graphs which gives approximate solutions based on search space pruning combined with Monte-Carlo sampling.
+**GlobalNucleus.java:** This is the implementation of global nucleus decomposition of probabilistic graphs which gives approximate solutions based on search space pruning combined with Monte-Carlo sampling.
 
 # Input 
 The graph datasets used for our algorithms should be in WebGraph format with edges being assigned probabilities. We refore to this type of Webgraph as ArcLabelled Webgraph. 
